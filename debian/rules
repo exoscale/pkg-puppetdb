@@ -37,7 +37,9 @@ binary-indep: build install
 			sed -i '/notifempty/a\    su puppetdb puppetdb' $(CURDIR)/debian/puppetdb.logrotate ; \
 		fi ; \
 	fi
+	dh_systemd_enable -ppuppetdb
 	dh_installinit -ppuppetdb
+	dh_systemd_start -ppuppetdb
 	dh_installlogrotate -i -ppuppetdb
 	dh_compress -i
 	dh_fixperms -i -X puppetdb-ssl-setup -X puppetdb-foreground -X puppetdb-import -X puppetdb-export -X puppetdb-anonymize -X puppetdb -X etc

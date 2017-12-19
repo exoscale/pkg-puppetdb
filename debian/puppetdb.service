@@ -1,0 +1,20 @@
+[Unit]
+Description=Puppet data warehouse server
+After=postgresql.service
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/default/puppetdb
+User=puppetdb
+ExecStart=/usr/bin/java ${JAVA_ARGS} \
+  -XX:OnOutOfMemoryError="kill -9 %%p" \
+  -cp ${INSTALL_DIR}/puppetdb.jar \
+  clojure.main \
+  -m com.puppetlabs.puppetdb.core services \
+  -c ${CONFIG}
+ExecReload=/bin/kill -HUP $MAINPID
+SuccessExitStatus=143
+StandardOutput=syslog
+
+[Install]
+WantedBy=multi-user.target

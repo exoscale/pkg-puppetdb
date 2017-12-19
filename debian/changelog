@@ -4,5 +4,6 @@ puppetdb (2.3.8-1puppetlabs1+xenial0+exo1) xenial; urgency=medium
      - Depends/Build-Depends on puppet-common instead of puppet.
      - Do not build puppetdb-terminus.
      - Use debhelper to generate parts of {pre,post}{inst,rm}.
+     - Add a systemd service file.
 
  -- Vincent Bernat <bernat@debian.org>  Tue, 19 Dec 2017 11:10:34 +0100
