@@ -1,0 +1,7 @@
+puppetdb (2.3.8-1puppetlabs1) hardy lucid maverick oneiric unstable lenny sid squeeze wheezy precise; urgency=low
+
+  * Add postgresql to suggests
+  * Adding an init script from Puppet Labs Ops
+  * Update postinst stuff to be official debian-style
+
+ -- Puppet Labs  <info@puppetlabs.com>  Tue, 13 Oct 2015 15:24:06 -0700

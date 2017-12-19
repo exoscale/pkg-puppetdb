@@ -1,0 +1,18 @@
+#!/bin/sh
+
+if [ "$1" = install ] || [ "$1" = upgrade ]; then
+ # Create the "puppetdb" user
+    if ! getent passwd puppetdb  > /dev/null; then
+        adduser --quiet --system --group --home /usr/share/puppetdb  \
+            --no-create-home                                 \
+            --gecos "Puppet StoredConfigs daemon" \
+            puppetdb
+    fi
+
+    # Create the "puppetdb" group, if it is missing, and set the
+    # primary group of the "puppetdb" user to this group.
+    if ! getent group puppetdb > /dev/null; then
+         addgroup --quiet --system puppetdb
+         usermod -g puppetdb puppetdb
+    fi
+fi

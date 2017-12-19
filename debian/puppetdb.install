@@ -1,0 +1,7 @@
+etc/puppetdb/conf.d
+etc/puppetdb/conf.d/../logback.xml
+var/log/puppetdb
+usr/share/puppetdb
+var/lib/puppetdb
+usr/lib/puppetdb
+usr/sbin

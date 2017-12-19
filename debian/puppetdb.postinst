@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Set up the SSL stuff
+
+/usr/sbin/puppetdb ssl-setup
+
+chmod 755 /etc/puppetdb
+chown -R puppetdb:puppetdb /etc/puppetdb/*
+chmod -R 640 /etc/puppetdb/*
+chmod -R ug+X /etc/puppetdb/*
+
+chgrp puppetdb /var/log/puppetdb
+chmod 775 /var/log/puppetdb
+
+chown -R puppetdb:puppetdb /var/lib/puppetdb
+
+
+
+set -e
+if [ -x "/etc/init.d/puppetdb" ]; then
+    if [ -x "`which invoke-rc.d 2>/dev/null`" ]; then
+        invoke-rc.d puppetdb start || exit $?
+    else
+        /etc/init.d/puppetdb start || exit $?
+    fi
+fi
