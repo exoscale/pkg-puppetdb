@@ -1,7 +1,7 @@
-puppetdb (2.3.8-1puppetlabs1) hardy lucid maverick oneiric unstable lenny sid squeeze wheezy precise; urgency=low
+puppetdb (2.3.8-1puppetlabs1+xenial0+exo1) xenial; urgency=medium
 
-  * Add postgresql to suggests
-  * Adding an init script from Puppet Labs Ops
-  * Update postinst stuff to be official debian-style
+  * Forward-port to Xenial.
+     - Depends/Build-Depends on puppet-common instead of puppet.
+     - Do not build puppetdb-terminus.
 
- -- Puppet Labs  <info@puppetlabs.com>  Tue, 13 Oct 2015 15:24:06 -0700
+ -- Vincent Bernat <bernat@debian.org>  Tue, 19 Dec 2017 11:10:34 +0100
