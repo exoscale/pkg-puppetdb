@@ -3,5 +3,6 @@ puppetdb (2.3.8-1puppetlabs1+xenial0+exo1) xenial; urgency=medium
   * Forward-port to Xenial.
      - Depends/Build-Depends on puppet-common instead of puppet.
      - Do not build puppetdb-terminus.
+     - Use debhelper to generate parts of {pre,post}{inst,rm}.
 
  -- Vincent Bernat <bernat@debian.org>  Tue, 19 Dec 2017 11:10:34 +0100

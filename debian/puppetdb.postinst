@@ -15,12 +15,4 @@ chmod 775 /var/log/puppetdb
 chown -R puppetdb:puppetdb /var/lib/puppetdb
 
 
-
-set -e
-if [ -x "/etc/init.d/puppetdb" ]; then
-    if [ -x "`which invoke-rc.d 2>/dev/null`" ]; then
-        invoke-rc.d puppetdb start || exit $?
-    else
-        /etc/init.d/puppetdb start || exit $?
-    fi
-fi
+#DEBHELPER#
