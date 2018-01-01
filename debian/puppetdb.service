@@ -6,7 +6,7 @@ After=postgresql.service
 Type=simple
 EnvironmentFile=/etc/default/puppetdb
 User=puppetdb
-ExecStart=${JAVA_BIN} $JAVA_ARGS \
+ExecStart=/usr/bin/java $JAVA_ARGS \
   -XX:OnOutOfMemoryError="kill -9 %%p" \
   -cp ${INSTALL_DIR}/puppetdb.jar \
   clojure.main \
