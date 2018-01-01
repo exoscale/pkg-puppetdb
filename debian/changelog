@@ -1,3 +1,9 @@
+puppetdb (2.3.8-1puppetlabs1+xenial0+exo3) xenial; urgency=medium
+
+  * Don't use XX:+HeapDumpOnOutOfMemoryError.
+
+ -- Vincent Bernat <bernat@debian.org>  Mon, 01 Jan 2018 09:50:32 +0100
+
 puppetdb (2.3.8-1puppetlabs1+xenial0+exo2) xenial; urgency=medium
 
   * Fix systemd unit file.

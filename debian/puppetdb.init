@@ -49,13 +49,6 @@ EXTRA_ARGS="--chuid $USER --background --make-pidfile"
 #
 do_start()
 {
-    # We need to do something with the log file...
-
-    # Move any heap dumps aside
-    if [ -e "/var/log/puppetdb/puppetdb-oom.hprof" ] ; then
-      mv "/var/log/puppetdb/puppetdb-oom.hprof" "/var/log/puppetdb/puppetdb-oom.hprof.prev"
-    fi
-
     # Return
     #   0 if daemon has been started
     #   1 if daemon was already running

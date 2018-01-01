@@ -26,7 +26,7 @@ else
 	JAVA_BIN="/usr/bin/java"
 fi
 # Modify this if you'd like to change the memory allocation, enable JMX, etc
-JAVA_ARGS="-Xmx1g -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/var/log/puppetdb/puppetdb-oom.hprof -Djava.security.egd=file:/dev/urandom"
+JAVA_ARGS="-Xmx1g -Djava.security.egd=file:/dev/urandom"
 
 # These normally shouldn't need to be edited if using OS packages
 USER="puppetdb"
