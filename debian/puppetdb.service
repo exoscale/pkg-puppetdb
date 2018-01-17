@@ -15,6 +15,7 @@ ExecStart=/usr/bin/java $JAVA_ARGS \
 ExecReload=/bin/kill -HUP $MAINPID
 SuccessExitStatus=143
 StandardOutput=syslog
+Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target

@@ -1,3 +1,9 @@
+puppetdb (2.3.8-1puppetlabs1+xenial0+exo5) xenial; urgency=medium
+
+  * Automatically restart on failure.
+
+ -- Vincent Bernat <bernat@debian.org>  Wed, 17 Jan 2018 10:12:09 +0100
+
 puppetdb (2.3.8-1puppetlabs1+xenial0+exo4) xenial; urgency=medium
 
   * Don't use ${JAVA_BIN} with systemd.
