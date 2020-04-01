@@ -1,3 +1,9 @@
+puppetdb (2.3.10-1puppetlabs1+xenial0+exo0) xenial; urgency=medium
+
+  * Improve fact retrieval performance.
+
+ -- Wouter Dullaert <wouter.dullaert@exoscale.ch>  Tue, 31 Mar 2020 14:40:00 +0100
+
 puppetdb (2.3.8-1puppetlabs1+xenial0+exo5) xenial; urgency=medium
 
   * Automatically restart on failure.
